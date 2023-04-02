@@ -1,28 +1,87 @@
-# MyDaniFooter
+# mydani-footer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+`mydani-footer` is an Angular library for adding a simple and elegant footer to your project. It uses Bootstrap to ensure a responsive design and style.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Before using `mydani-footer`, make sure you have installed:
 
-## Code scaffolding
+1. [Node.js](https://nodejs.org/)
+2. [Angular CLI](https://cli.angular.io/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+To install `mydani-footer` in your Angular project, follow these steps:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Install the library using npm:
 
-## Running unit tests
+```bash
+npm install mydani-footer
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Install Bootstrap in your project, as mydani-footer uses Bootstrap styles:
 
-## Running end-to-end tests
+```bash
+npm install bootstrap
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Add the Bootstrap import to your angular.json file in the styles section:
 
-## Further help
+```bash
+"styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"
+],
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# MYDANIFOOTER
+4. Import MydaniFooterModule in your app.module.ts file:
+
+```bash
+import { MydaniFooterModule } from 'mydani-footer';
+@NgModule({
+  imports: [
+    // ...
+    MydaniFooterModule
+  ],
+  // ...
+})
+export class AppModule { }
+
+## Usage
+
+To use the mydani-footer component in your project, simply add the following tag to your HTML file where you want the footer to appear:
+
+```bash
+<lib-mydani-footer></lib-mydani-footer>
+
+if you want the footer to be always attached to the footer, here is an example that you can use
+In app.components .html you can structure it as follows:
+
+```bash
+<app-navbar></app-navbar>
+
+<div class="container">
+
+    <router-outlet></router-outlet>
+
+</div>
+
+<app-footer></app-footer>
+
+In the component app.component.scss put:
+
+```bash
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+## Customization
+
+You can customize the footer style by modifying the styles in your global CSS file or in the specific style file for your component. Custom styles will override the default styles of the mydani-footer component.
+
+## License
+
+mydani-footer is open-source software with an MIT license.
+
+## Author
+
+DGO
