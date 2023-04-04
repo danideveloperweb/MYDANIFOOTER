@@ -1,0 +1,17 @@
+{
+  "name": "mydani-footer",
+  "version": "0.0.1",
+  "description": "This library is responsible for making a footer and can be installed in any Angular project.",
+  "author": {
+    "name": "DGO"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^15.2.0",
+    "@angular/core": "^15.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
