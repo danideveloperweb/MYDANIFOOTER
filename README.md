@@ -20,12 +20,12 @@ npm install mydani-footer
 
 2. Install Bootstrap in your project, as mydani-footer uses Bootstrap styles:
 
-```bash
+
 npm install bootstrap
 
 3. Add the Bootstrap import to your angular.json file in the styles section:
 
-```bash
+
 "styles": [
   "node_modules/bootstrap/dist/css/bootstrap.min.css",
   "src/styles.css"
@@ -33,8 +33,9 @@ npm install bootstrap
 
 4. Import MydaniFooterModule in your app.module.ts file:
 
-```bash
+
 import { MydaniFooterModule } from 'mydani-footer';
+
 @NgModule({
   imports: [
     // ...
@@ -48,7 +49,7 @@ export class AppModule { }
 
 To use the mydani-footer component in your project, simply add the following tag to your HTML file where you want the footer to appear:
 
-```bash
+
 <lib-mydani-footer></lib-mydani-footer>
 
 if you want the footer to be always attached to the footer, here is an example that you can use
@@ -63,20 +64,27 @@ In app.components .html you can structure it as follows:
 
 </div>
 
-<app-footer></app-footer>
+<lib-mydani-footer></lib-mydani-footer>
 
 In the component app.component.scss put:
 
-```bash
 .container {
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
 }
 
+
 ## Customization
 
-You can customize the footer style by modifying the styles in your global CSS file or in the specific style file for your component. Custom styles will override the default styles of the mydani-footer component.
+You can customize the footer styling by modifying the styles in your global CSS file or in the styles file specific to your component. 
+
+Custom styles will override the default styles of the mydani-footer component.
+
+Here is an example of how to do this.
+
+<lib-mydani-footer [footerColor]="'#FFD700'" [footerText]="'Mi texto personalizado'"></lib-mydani-footer>
+
 
 ## License
 

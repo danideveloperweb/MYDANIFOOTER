@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'lib-mydani-footer',
   template: `
-     <footer class="footer py-3">
+     <footer class="footer py-3" [style.backgroundColor]="footerColor">
     <div class="row">
       <div class="col">
-        <a href="https://github.com/danideveloperweb" target="_blank">DGO 2023 ©Danideveloperweb</a>
+        <a href="https://github.com/danideveloperweb" target="_blank" [innerHTML]="footerText"></a>
       </div>
     </div>
   </footer>
@@ -18,7 +18,6 @@ import { Component } from '@angular/core';
     }
 
     footer {
-      background-color: #F8F5E4;
       height: 50px;
       font-family: 'Roboto', sans-serif;
       font-size: 0.8rem;
@@ -51,5 +50,6 @@ import { Component } from '@angular/core';
   `]
 })
 export class MydaniFooterComponent {
-
+  @Input() footerColor: string = '#F8F5E4';
+  @Input() footerText: string = 'DGO 2023 ©Danideveloperweb';
 }
